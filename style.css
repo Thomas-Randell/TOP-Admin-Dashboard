@@ -66,7 +66,7 @@ p {
 
 /* Header */
 .header {
-    padding: 15px;
+    padding: 10px;
     display: grid;
     grid-template-rows: 0.33fr 0.67fr;
     grid-template-columns: 1fr;
@@ -151,7 +151,7 @@ p {
     border-radius: 15px;
     padding: 15px;
     display: grid;
-    grid-template: 0.1fr .8fr .1fr / .80fr .20fr;
+    grid-template: 0.1fr .8fr .1fr / 1fr auto;
 }
 
 .project-card > h4 {
@@ -164,9 +164,9 @@ p {
 
 .interact {
     display: grid;
-    grid-template-columns: 1fr repeat(3, 30px);
+    grid-template-columns: repeat(3, 30px);
     align-items: center;
-    grid-area: 3 / 2 / -1 / span 1;
+    grid-area: 3 / 2 / 4 / span 1;
 }
 
 .announcements {
@@ -188,7 +188,10 @@ p {
 }
 
 .announcement-content > h4 {
-    margin-bottom: 3px;
+    margin-bottom: 1px;
+}
+.announcement-content > p {
+    margin-top: 1px;
 }
 
 .trending {
@@ -200,12 +203,14 @@ p {
     border-radius: 15px;
     padding: 15px;
     display: grid;
-    grid-template: .5fr .5fr / .25fr .75fr;
+    grid-template: .5fr .5fr / auto .75fr;
     gap: 5px
 }
 
 .trending-item {
     display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 3px;
     grid-column: 1 / span 2;
     align-items: center;
 }
